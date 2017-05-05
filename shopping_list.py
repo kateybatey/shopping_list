@@ -51,7 +51,7 @@ def add_to_shopping_list(lists_by_name, list_name, items):
     Returns:
       None
     """
-
+    lists_by_name[list_name].extend(items)
 
 
 
@@ -69,7 +69,10 @@ def remove_from_shopping_list(lists_by_name, list_name, items):
     Returns:
       None
     """
-
+    for food in lists_by_name[list_name]:
+        lists_by_name[list_name].remove(items)
+        else:
+            print 'error'
 
 
 
